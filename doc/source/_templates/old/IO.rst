@@ -2,6 +2,6 @@ IO module
 =========
 
 .. automodule:: IO
-   :members:
+   :members: 
    :undoc-members:
    :show-inheritance:

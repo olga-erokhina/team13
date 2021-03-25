@@ -11,6 +11,10 @@ Welcome to mdp_analysis's documentation!
    :caption: Contents:
 
 
+   README
+   installation
+   modules
+
 
 Indices and tables
 ==================
