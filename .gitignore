@@ -128,3 +128,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#try out test things
+src/test
+
+#documentation folders
+doc/source
+
