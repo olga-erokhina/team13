@@ -40,7 +40,7 @@ def get_correlation_measure(df):
         for j in range(0, i+1): # get rid of all diagonal entries and the lower triangular
             drop_values.add((cols[i], cols[j]))
     corr2 = df.corr().unstack() # pivot the correlation matrix
-    corr2 = corr2.drop(labels=drop_vals).sort_values(ascending=False, key=lambda col: col.abs()) # sort by absolute values but keep sign
+    corr2 = corr2.drop(labels=drop_values).sort_values(ascending=False, key=lambda col: col.abs()) # sort by absolute values but keep sign
     return corr2
 
 def euclidean_distance(list_ref, list_comp, vectors):
@@ -58,4 +58,4 @@ def euclidean_distance(list_ref, list_comp, vectors):
     distances = np.zeros(len(list_ref))
     for i in range(len(list_ref)):
         distances[i] = np.linalg.norm(vectors[list_comp[i]] - vectors[list_ref[i]])
-    return disances
+    return distances
