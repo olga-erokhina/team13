@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input_output module &#8212; mdp_analysis 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="mdp_analysis" href="modules.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="mdp_analysis"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">mdp_analysis 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">mdp_analysis</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">input_output module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-IO">
+<span id="input-output-module"></span><h1>input_output module<a class="headerlink" href="#module-IO" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="module-numerical">
+<span id="numerical-module"></span><h1>numerical module<a class="headerlink" href="#module-numerical" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="numerical.calc_auto">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">calc_auto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavef</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.calc_auto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Claculate autocorelation.
+:param wavef: input array.
+:type wavef: complex array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>output array.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>autocofu (array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="numerical.check_if_significant_np">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">check_if_significant_np</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.check_if_significant_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if significant with regard to threshold.
+:param data_in: input data.
+:type data_in: float array
+:param threshold: the threshold value.
+:type threshold: float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>significant columns.
+indicies (integer array): indicies of significant values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>data_out (float array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="numerical.do_DFT">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">do_DFT</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.do_DFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do Discrete Fourier transformation.
+:param data_in: input data.
+:type data_in: array
+:param tmax: sample frequency.
+:type tmax: float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>output array.
+data_w (array): the Discrete Fourier Transform sample frequencies.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>data_s (complex array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="numerical.do_positive_DFT">
+<code class="sig-prename descclassname"><span class="pre">numerical.</span></code><code class="sig-name descname"><span class="pre">do_positive_DFT</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numerical.do_positive_DFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do Discrete Fourier transformation and take POSITIVE frequency component part.
+:param data_in: input data.
+:type data_in: array
+:param tmax: sample frequency.
+:type tmax: float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>output array with POSITIVE frequency component part.
+data_w (array): the Discrete Fourier Transform sample frequencies POSITIVE frequency component part.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>data_s (array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-statistical">
+<span id="statistical-module"></span><h1>statistical module<a class="headerlink" href="#module-statistical" title="Permalink to this headline">¶</a></h1>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">input_output module</a></li>
+<li><a class="reference internal" href="#module-numerical">numerical module</a></li>
+<li><a class="reference internal" href="#module-statistical">statistical module</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="previous chapter">mdp_analysis</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mdp_analysis.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="mdp_analysis"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">mdp_analysis 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >mdp_analysis</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">input_output module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Jing Sun, Olga Erokhina, Robin Koch.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+    </div>
+  </body>
+</html>
