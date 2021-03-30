@@ -1,9 +1,8 @@
 import pandas as pd
 import numpy as np
-import seaborn as sn
 
 
-######## Input functions ########
+# Input functions #
 
 def read_df(filedir, filename):
     """
@@ -44,8 +43,7 @@ def read_np(filedir, filename):
     return data
 
 
-################################
-####### Output functions #######
+# Output functions #
 
 def save_plot(figure, plotdir, filename):
     """
@@ -63,8 +61,8 @@ def save_plot(figure, plotdir, filename):
     """
 
     fig = figure.get_figure()
-    print('Saving figure at {}{}'.format(plotdir,filename))
-    fig.savefig('{}{}'.format(plotdir,filename))
+    print('Saving figure at {}{}'.format(plotdir, filename))
+    fig.savefig('{}{}'.format(plotdir, filename))
     return
 
 
@@ -83,7 +81,7 @@ def save_df_data(df, filedir, filename):
         Nothing
     """
 
-    print('Saving data at {}{}'.format(filedir,filename))
+    print('Saving data at {}{}'.format(filedir, filename))
     df.to_csv('{}{}'.format(filedir, filename), index=False)
     return
 
@@ -103,6 +101,6 @@ def save_np_data(arr, filedir, filename):
         Nothing
     """
 
-    print('Saving data at {}{}'.format(filedir,filename))
-    np.savetxt(fname = '{}{}'.format(filedir,filename), X = arr)
+    print('Saving data at {}{}'.format(filedir, filename))
+    np.savetxt(fname='{}{}'.format(filedir, filename), X=arr)
     return
