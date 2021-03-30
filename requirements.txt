@@ -1,1 +1,7 @@
-
+numpy
+pandas
+seaborn
+flake8
+pytest
+sphinx
+recommonmark
